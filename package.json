@@ -21,7 +21,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "stylelint-config-htmlacademy": "^0.1.4"
   },
   "browserslist": [
     "last 2 version"

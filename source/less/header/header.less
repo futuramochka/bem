@@ -1,9 +1,100 @@
-h1 {
+//Ширина блока
+@width-header: 320px;
+//Ширина внутри обёртки
+@width-header-wrapper: 280px;
+//Ширина отступов обёртки
+@width-paddin-wrapper: 20px;
+//Высота ячейки меню
+@height-item-menu: 64px;
+
+
+.page-header {
+  width: 100%;
+  min-height: 325px;
+
+  background-color: #283645;
+}
+
+.page-header__wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: percentage(@width-header-wrapper/@width-header);
+  height: 69px;
+  padding: 0 percentage(@width-paddin-wrapper/@width-header);
+}
 
-  font-size: 25px;
-  color: gray;
+.page-header__logo {
+  position: absolute;
 
-  background-color: rgb(49, 110, 131);
+  height: 22px;
+  padding-top: 22px;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    position: relative;
+    top: 69px - 23px;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  top: 22px;
+
+  align-self: flex-end;
+  width: 24px;
+  height: 23px;
+
+  background: none;
+  background-image: url("../../img/menu-cross.png");
+  background-repeat: no-repeat;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.site-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: @height-item-menu;
+
+  &:before {
+    content: "";
+
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+
+    background-color: #000000;
+    box-shadow: 0 1px 0 #485461;
+  }
+}
+
+.site-list__link {
+  margin-top: (@height-item-menu - 32)/2;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Open Sans";
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
 }
