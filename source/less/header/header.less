@@ -1,9 +1,83 @@
-h1 {
+//Ширина элементов списка меню
+@height-site-list-item: 64px;
+
+.page-header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 325px;
 
-  font-size: 25px;
-  color: gray;
+  background-color: #283645;
+}
 
-  background-color: rgb(49, 110, 131);
+.page-header__logo {
+  width: 57px;
+  height: 22px;
+  margin-top: 22px;
+  margin-left: 20px;
+}
+
+.main-nav {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: inherit;
+  min-height: inherit;
+}
+
+.main-nav__toggle {
+  align-self: flex-end;
+  width: 24px;
+  height: 23px;
+  margin-top: 22px;
+  margin-right: 20px;
+
+  background: none;
+  background-image: url("../../less/header/img/cross.png");
+  background-repeat: no-repeat;
+  border: 0;
+  outline: none;
+}
+
+.site-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__list {
+  margin-top: 24px;
+}
+
+.site-list__item {
+  min-height: @height-site-list-item;
+
+  text-align: center;
+
+  &:before {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: #000000;
+    box-shadow: 0 1px 0 #485461;
+  }
+}
+
+.site-list__link {
+  position: relative;
+  top: 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
 }
