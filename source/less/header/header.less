@@ -1,4 +1,8 @@
-//Ширина элементов списка меню
+//Ширина шапки для мобильных 320
+@width-page-header: 320px;
+//Отступ логотипа слева
+@margin-left-logo: 20px;
+//Высота элементов списка меню
 @height-site-list-item: 64px;
 
 .page-header {
@@ -14,7 +18,7 @@
   width: 57px;
   height: 22px;
   margin-top: 22px;
-  margin-left: 20px;
+  margin-left: percentage(@margin-left-logo/@width-page-header);
 }
 
 .main-nav {
@@ -32,7 +36,7 @@
   width: 24px;
   height: 23px;
   margin-top: 22px;
-  margin-right: 20px;
+  margin-right: percentage(@margin-left-logo/@width-page-header);
 
   background: none;
   background-image: url("../../less/header/img/cross.png");
