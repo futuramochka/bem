@@ -2,8 +2,6 @@
 @width-page-header: 320px;
 //Отступ логотипа слева
 @margin-left-logo: 20px;
-//Высота элементов списка меню
-@height-site-list-item: 64px;
 
 .page-header {
   display: flex;
@@ -45,43 +43,7 @@
   outline: none;
 }
 
-.site-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
 .main-nav__list {
-  margin-top: 24px;
-}
-
-.site-list__item {
-  min-height: @height-site-list-item;
-
-  text-align: center;
-
-  &:before {
-    content: "";
-
-    display: block;
-    width: 100%;
-    height: 1px;
-
-    background-color: #000000;
-    box-shadow: 0 1px 0 #485461;
-  }
-}
-
-.site-list__link {
   position: relative;
-  top: 16px;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 32px;
-  font-family: "Open Sans", sans-serif;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
+  top: 24px;
 }
