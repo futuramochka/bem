@@ -1,15 +1,102 @@
-.slider__toggle--active {
-  background-color: black;
+//Ширина шапки
+@width-header: 320px;
+//Внешний отступ
+@margin: 20px;
+//Высота ячейки списка
+@height-item: 64px;
+//Высота от начала шапки до блока меню
+@height-for-top: 69px;
+//Высота логотипа
+@height-logo: 22px;
+//Высота кнопки меню
+@height-toggle-menu: 23px;
+
+.page-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: @width;
+  min-height: 325px;
+
+  background-color: #283645;
 }
 
-.price__header-item--label {
-  color: blue;
+.page-header__logo {
+  width: 57px;
+  height: @height-logo;
+  margin-top: (@height-for-top - @height-logo)/2;
+  margin-left: percentage(@margin/@width-header);
 }
 
-.price__body-item--check {
-  background-color: green;
+.main-nav {
+  display: flex;
+  flex-direction: column;
 }
 
-.price__body-item--cross {
-  background-color: red;
+.main-nav__toggle {
+  position: absolute;
+  top: (@height-for-top - @height-toggle-menu)/2;
+  right: percentage(@margin/@width-header);
+
+  align-self: flex-end;
+  width: 24px;
+  height: @height-toggle-menu;
+
+  background: none;
+  background-image: url("../../less/header/img/cross.png");
+  background-repeat: no-repeat;
+  border: 0;
+  outline: 0;
+}
+
+.main-nav__list {
+  position: absolute;
+  top: @height-for-top;
+
+  align-self: center;
+}
+
+.site-list {
+  width: @width;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-list__item {
+  height: @height-item;
+
+  text-align: center;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: @width;
+    height: 1px;
+
+    background-color: #000000;
+    box-shadow: 0 1px 0 #485461;
+  }
+}
+
+.site-list__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: @height-item;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Open Sans";
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.visually-hidden {
+  display: none;
 }

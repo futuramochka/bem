@@ -39,7 +39,7 @@ function styles(){
         level: 2
     }))
     //Куда запишется карта кода. Запишется в style.css
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     //Путь куда будут записываться файлы в результате
     .pipe(gulp.dest('./source/css'))
     .pipe(Sync.stream());
