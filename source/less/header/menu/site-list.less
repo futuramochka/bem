@@ -1,0 +1,42 @@
+//Высота ячейки списка
+@height-item: 64px;
+
+.site-list {
+  width: @width;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-list__item {
+  height: @height-item;
+
+  text-align: center;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: @width;
+    height: 1px;
+
+    background-color: #000000;
+    box-shadow: 0 1px 0 #485461;
+  }
+}
+
+.site-list__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: @height-item;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Open Sans";
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}

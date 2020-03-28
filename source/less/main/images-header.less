@@ -1,0 +1,79 @@
+//Отступы подзаголовка
+@padding-subtitle: 20px;
+
+.images-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 395px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    z-index: 400;
+
+    display: block;
+    width: @width;
+    height: 1px;
+
+    background-color: #000000;
+  }
+}
+
+.images-header__subtitle {
+  position: absolute;
+  top: 33px;
+  z-index: 400;
+
+  margin: 0;
+  padding: 0 percentage(@padding-subtitle/@width-header);
+
+  font-weight: 300;
+  font-size: 24px;
+  font-family: "Open Sans";
+  text-align: center;
+  color: #ffffff;
+}
+
+.image-header__item {
+  position: absolute;
+
+  background-repeat: no-repeat;
+}
+
+.image-header__item--one {
+  top: -60px;
+  z-index: 300;
+
+  width: 320px;
+  height: 462px;
+
+  background-image: url("../../less/main/img/one.png");
+}
+
+.image-header__item--two {
+  top: 109px;
+  right: -11px;
+  z-index: 500;
+
+  align-self: center;
+  width: 498px;
+  height: 314px;
+
+  background-image: url("../../less/main/img/two.png");
+}
+
+.image-header__item--three {
+  top: 141px;
+  //left: 97.5px;
+  z-index: 400;
+
+  align-self: center;
+  width: 111px;
+  height: 197px;
+
+  background-image: url("../../less/main/img/three.png");
+}
