@@ -1,0 +1,75 @@
+//Высота кнопки
+@height-button: 56px;
+//Толщина рамки кнопки
+@height-border: 3px;
+
+//Высота кнопки без учёта толщины рамки
+@height-whithout-border: @height-button - (@height-border * 2);
+//Высота строки текста кнопки
+@height-line-bttext: 18px;
+//Верхний внутренний отступ картинок
+@margin-top-image: 38px;
+//Отступы по краям
+
+
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: @width;
+  min-height: 272px;
+
+  background-color: #1d2631;
+}
+
+.download__button {
+  position: relative;
+  top: 27px;
+}
+
+.button {
+  width: 280px;
+  height: @height-whithout-border;
+
+  text-decoration: none;
+
+  border: @height-border solid #ffffff;
+  border-radius: 30px;
+}
+
+.button__text {
+  margin: 0;
+  margin-top: (@height-whithout-border - @height-line-bttext)/2;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: @height-line-bttext;
+  font-family: "Open Sans";
+  text-align: center;
+  color: #ffffff;
+}
+
+.download__images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 206px;
+  margin: 0;
+  margin-top: (@height-button/2) + @margin-top-image;
+  padding: 0;
+
+  list-style: none;
+}
+
+.download__description {
+  margin: 0 percentage(@margin/@width-phone);
+  margin-top: 28px;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Open Sans";
+  text-align: center;
+  color: #ffffff;
+}

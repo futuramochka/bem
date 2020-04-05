@@ -1,7 +1,5 @@
 //Ширина шапки
-@width-header: 320px;
-//Внешний отступ
-@margin: 20px;
+@width-phone: 320px;
 //Высота кнопки меню
 @height-toggle-menu: 23px;
 //Высота от начала шапки до блока меню
@@ -29,7 +27,7 @@ body {
   width: 57px;
   height: @height-logo;
   margin-top: (@height-for-top - @height-logo)/2;
-  margin-left: percentage(@margin/@width-header);
+  margin-left: percentage(@margin/@width-phone);
 }
 
 .main-nav {
@@ -40,7 +38,7 @@ body {
 .main-nav__toggle {
   position: absolute;
   top: (@height-for-top - @height-toggle-menu)/2;
-  right: percentage(@margin/@width-header);
+  right: percentage(@margin/@width-phone);
 
   align-self: flex-end;
   width: 24px;
