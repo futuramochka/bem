@@ -1,0 +1,89 @@
+//Ширина слайдера
+@width-slider: 60px;
+
+.rewiews {
+  width: @width;
+}
+
+.rewiews__list {
+  margin: 0 20px;
+  padding: 0;
+  padding-top: 50px;
+
+  list-style: none;
+  text-align: center;
+}
+
+.rewiews__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: "Open Sans";
+  text-align: center;
+  color: #283645;
+}
+
+.rewiews__item:nth-child(1),
+.rewiews__item:nth-child(2) {
+  display: none;
+}
+
+.rewiews__username {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+}
+
+.rewiews__about-user {
+  display: none;
+}
+
+.rewiews__prev,
+.rewiews__next {
+  display: none;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  width: @width-slider;
+  margin-left: @width-phone/2 - @width-slider/2;
+}
+
+.slider__toggle {
+  background: none;
+  border: none;
+  outline: none;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    background-color: #bec2c7;
+    border-radius: 50%;
+  }
+}
+
+.slider__toggle--active {
+  width: 12px;
+  height: 12px;
+
+  background-color: #273545;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: relative;
+    right: 3px;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+}
